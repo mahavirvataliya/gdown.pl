@@ -16,12 +16,13 @@ my $TEMP='gdown.cookie.temp';
 my $COMMAND;
 my $confirm;
 my $check;
+my $URL=shift;
 sub execute_command();
 
 execute_command();
 
 sub execute_command() {
-    $COMMAND="curl -X POST -H 'Content-type: application/json' --data '{\"text\":\"Video Processed or Converted\"}' https://hooks.slack.com/services/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";
+    $COMMAND="curl -X POST -H 'Content-type: application/json' --data '{\"text\":\"Video Processed or Converted\"}' $URL";
     system ( $COMMAND );
     return 1;
 }
