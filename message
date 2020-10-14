@@ -1,0 +1,27 @@
+#!/usr/bin/env perl
+#
+# Google Drive direct download of big files
+# ./gdown.pl 'gdrive file url' ['desired file name']
+#
+# v1.0 by circulosmeos 04-2014.
+# v1.1 by circulosmeos 01-2017.
+# v1.2, v1.3, v1.4 by circulosmeos 01-2019, 02-2019.
+# //circulosmeos.wordpress.com/2014/04/12/google-drive-direct-download-of-big-files
+# Distributed under GPL 3 (//www.gnu.org/licenses/gpl-3.0.html)
+#
+use strict;
+use POSIX;
+
+my $TEMP='gdown.cookie.temp';
+my $COMMAND;
+my $confirm;
+my $check;
+sub execute_command();
+
+execute_command();
+
+sub execute_command() {
+    $COMMAND="curl -X POST -H 'Content-type: application/json' --data '{\"text\":\"Video Processed or Converted\"}' https://hooks.slack.com/services/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";
+    system ( $COMMAND );
+    return 1;
+}
